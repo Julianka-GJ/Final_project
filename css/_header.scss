@@ -1,0 +1,126 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 51px;
+    margin-bottom: 82px;
+}
+
+.header__logo__wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    p {
+        font-size: 38px;
+        line-height: 45px;
+        color: #323264;
+    }
+}
+
+.logo__img {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header__burger {
+    display: none;
+}
+
+.header__contact__nav {
+    @include column-flex-end;
+}
+
+.header__contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    
+    & div {
+        position: relative;
+        padding-right: 26px;
+    }
+
+    & div::after {
+        @include pseudo;
+        top: 9px;
+        right: 10px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50px;
+        background-color: #E6E6F0;
+    }
+}
+
+.header__languages {
+    display: flex;
+    align-items: center;
+}
+
+.header__languages__button {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    padding: 5px;
+    color: $text__grey;
+    transition-duration: 1s;
+
+    &:hover {
+        background-color: #EDEDF7;
+        color: $text__grey;
+    }
+}
+
+.header__languages__button.active {
+    background-color: $languages-button-active;
+    color: #FFFFFF;
+}
+
+.header__address {
+    p {
+        font-size: 16px;
+        line-height: 19px;
+        padding: 2px 0;
+        color: $text__grey;
+    }
+}
+
+.header__number {
+    padding: 2px 0;
+
+    a {
+        line-height: 19px;
+        color: $text__grey;
+    }
+}
+
+.ico-facebook {
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+    &:hover {
+        fill: #24A3FF;
+    }
+}
+
+.header__nav {
+    display: flex;
+
+    a {
+        margin-left: 15px;
+        font-weight: 400;
+        line-height: 21px;
+        font-size: 18px;
+        color: $services__skill-h3;
+        transition-duration: 1s;
+
+        &:hover {
+            color: #F0145A;
+        }
+    }
+
+    a.active {
+        color: #F0145A;
+        border-bottom: 2px solid #F0145A;
+    }
+}
+

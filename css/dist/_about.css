@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "TTnorms";
+  src: url("../font/ttnorms-bold-webfont.woff2") format("woff2"), url("../font/ttnorms-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "TTnorms";
+  src: url("../font/ttnorms-medium-webfont.woff2") format("woff2"), url("../font/ttnorms-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: medium;
+}
+@font-face {
+  font-family: "TTnorms";
+  src: url("../font/ttnorms-regular-webfont.woff2") format("woff2"), url("../font/ttnorms-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: "TTnorms", "Roboto", "Tachoma", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 63px;
+}
+
+.section__header {
+  background-image: linear-gradient(to right top, #323264, #323264 50%, #7A425E);
+  position: relative;
+  padding-top: 50px;
+}
+
+.header__contact__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header__contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.header__contact div {
+  position: relative;
+  padding-right: 26px;
+}
+.header__contact div::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #E6E6F0;
+}
+
+.header__languages {
+  display: flex;
+  align-items: center;
+}
+
+.header__languages__button {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  padding: 5px;
+  transition-duration: 1s;
+}
+.header__languages__button:hover {
+  background-color: #EDEDF7;
+  color: #B3B3BA;
+}
+
+.header__languages__button.active {
+  background-color: #F0145A;
+}
+
+.header__address p {
+  font-size: 16px;
+  line-height: 19px;
+  padding: 2px 0;
+}
+
+.header__number {
+  padding: 2px 0;
+}
+.header__number a {
+  line-height: 19px;
+}
+
+.ico-facebook {
+  cursor: pointer;
+  transition-duration: 1s;
+}
+.ico-facebook:hover {
+  fill: #24A3FF;
+}
+
+.header__nav {
+  display: flex;
+}
+.header__nav a {
+  padding-left: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  font-size: 18px;
+  transition-duration: 1s;
+}
+.header__nav a:hover {
+  color: #F0145A;
+}

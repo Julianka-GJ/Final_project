@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'TT Norms';
+    src: url('../font/TTNorms-Bold.woff2') format('woff2'),
+         url('../font/TTNorms-Medium.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('../font/TTNorms-Medium.woff2') format('woff2'),
+         url('../font/TTNorms-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('../font/TTNorms-Regular.woff2') format('woff2'),
+         url('../font/TTNorms-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'TT Norms', 'Roboto', 'Tachoma', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+
+// color 
+$linear-gradient-header: to right top, #323264, #323264 50%, #7A425E;
+$background-symbol-before: rgba(22, 22, 136, 0) 17%, #323264 90%;
+$section__services-background: to left bottom, #323264, #323264 60%, #643E72;
+$title-h2: to right, #F0145A, #EF8080;
+$services__skill-h3: #24A3FF; // также меню nav header, ссылки, button
+$section__team-background: #F5F5FA;
+$text__grey: #B3B3BA; // мелкие серые заголовки, header, footer
+$background-publications: #FFFFFF; // background для box section__publications
+
+$border-cases: 1px solid #FFFFFF;
+$border-lightgray: 4px solid #E6E6F0;
+
+
+//button
+$languages-button-active: #F0145A;
+
+@mixin pseudo( $pos: absolute, $content: ''){
+    content: $content;
+    position: $pos;
+  }
+
+@mixin column-flex-end {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@mixin active__tab {
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #EF8080, #F0145A);
+    -webkit-text-fill-color: transparent; 
+}
+
+@mixin active__tab-reserve {   // заголовки h2
+    -webkit-background-clip: text;
+    background-image: linear-gradient($title-h2);
+    -webkit-text-fill-color: transparent; 
+}
+
+@mixin services__division {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@mixin title-services {   // заголовки h2
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+@mixin cases-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@mixin publications-title {  //синие заголовоки h4 section__publications
+    font-size: 18px;
+    color: #24A3FF;
+    line-height: 21px;
+}
+
+@mixin footer-contact {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17px;
+}
+
+@mixin contact-title {  
+    font-size: 21px;
+    line-height: 30px;
+}
+
+%title-gradient-h2 {
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #F0145A, #EF8080);
+    -webkit-text-fill-color: transparent; 
+}
+
+@mixin button {
+    border-style: none;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding: 16px 0;
+    background-color: #24A3FF;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+    transition-duration: 1s;
+}

@@ -1,0 +1,16 @@
+@import "variables";
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 0 60px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@import "header";

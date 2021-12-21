@@ -1,0 +1,111 @@
+.section__footer {
+    background-color: $section__team-background;
+    padding-bottom: 40px;
+}
+
+.footer__adress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    border-top: $border-lightgray;
+    padding-top: 32px;
+}
+
+.adress__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+
+    p {
+        @include footer-contact;
+        color: #323264;
+        margin-right: 47px;
+    }
+
+    a {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $services__skill-h3;
+        position: relative;
+        transition-duration: 0.5s;
+
+        &::before {
+            @include pseudo;
+            top: 4px;
+            left: -16px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50px;
+            background-color: #B3B3BA;
+        }
+        
+        &:hover {
+            color: #F0145A;
+        }
+    }
+}
+
+.footer__contact {
+    display: flex;
+    align-items: center;
+}
+
+.social-fb {
+    fill: $services__skill-h3;
+    transition-duration: 0.5s;
+
+    &:hover {
+        fill: #F0145A;
+    }
+}
+
+.footer__number {
+    @include footer-contact;
+    color: #46466E;
+    padding: 0 26px 0 17px;
+    position: relative;
+
+    &::before {
+        @include pseudo;
+        top: 5px;
+        left: 6px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50px;
+        background-color: #B3B3BA;
+    }
+}
+
+.footer__mailto {
+    @include footer-contact;
+    color: $services__skill-h3;
+    position: relative;
+    transition-duration: 0.5s;
+
+    &::before {
+        @include pseudo;
+        top: 6px;
+        left: -14px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50px;
+        background-color: #B3B3BA;
+    }
+
+    &:hover {
+        color: #F0145A;
+    }
+}
+
+.footer__company {
+    display: flex;
+    p {
+        color: $text__grey;
+        font-size: 16px;
+        line-height: 19px;
+        padding-left: 2px;
+    }
+}
