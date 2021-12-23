@@ -52,7 +52,7 @@ a {
   margin-bottom: 82px;
 }
 
-.header__logo {
+.header__logo__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,14 +61,23 @@ a {
           align-items: flex-start;
 }
 
-.header__logo p {
+.header__logo__wrapper p {
   font-size: 38px;
   line-height: 45px;
   color: #323264;
 }
 
 .logo__img {
-  padding-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header__burger {
+  display: none;
 }
 
 .header__contact__nav {
@@ -154,6 +163,7 @@ a {
 .header__number a {
   line-height: 19px;
   color: #B3B3BA;
+  font-weight: 700;
 }
 
 .ico-facebook {
@@ -418,6 +428,8 @@ a {
 
 .section__map {
   background-color: #F5F5FA;
+  width: 100%;
+  overflow: hidden;
 }
 
 .section__footer {
@@ -432,7 +444,6 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 22px;
   border-top: 4px solid #E6E6F0;
   padding-top: 32px;
 }
@@ -444,6 +455,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 22px;
 }
 
 .adress__box p {
@@ -479,12 +491,6 @@ a {
 
 .adress__box a:hover {
   color: #F0145A;
-}
-
-.footer__company p {
-  color: #B3B3BA;
-  font-size: 16px;
-  line-height: 19px;
 }
 
 .footer__contact {
@@ -551,7 +557,213 @@ a {
   color: #F0145A;
 }
 
+.footer__company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__company p {
+  color: #B3B3BA;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 2px;
+}
+
 .footer__adress {
   border: none;
+}
+
+@media screen and (max-width: 1125px) {
+  .header__address {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding: 20px 30px 0;
+  }
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    padding: 10px 7px;
+  }
+  .header__burger::after, .header__burger::before {
+    content: "";
+    position: absolute;
+    background-color: #323264;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #323264;
+    top: 19px;
+    left: 0;
+  }
+  .header__contact__nav {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contact__nav__wrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .header__contact {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__contact div {
+    padding-right: 0;
+  }
+  .header__contact div::after {
+    display: none;
+  }
+  .header__languages__button {
+    font-size: 14px;
+    padding: 7px;
+  }
+  .facebook {
+    display: none;
+  }
+  .header__nav {
+    display: none;
+  }
+  .footer__adress, .adress__box, .footer__contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__adress {
+    padding: 0 20px 118px;
+  }
+  .adress__box {
+    margin-bottom: 0;
+  }
+  .adress__box p {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .adress__box a {
+    margin-bottom: 20px;
+  }
+  .adress__box a::before {
+    display: none;
+  }
+  .footer__contact a {
+    margin-bottom: 20px;
+  }
+  .footer__number::before {
+    display: none;
+  }
+  .footer__mailto::before {
+    display: none;
+  }
+  .footer__company {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    margin-bottom: 30px;
+  }
+  .symbol {
+    width: 21.16px;
+    height: 23.95px;
+  }
+  .slash {
+    width: 11px;
+    height: 24px;
+  }
+  .header__logo__wrapper p {
+    font-size: 19px;
+    line-height: 22px;
+  }
+  .section__contact__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 40px;
+  }
+  .contact__adress {
+    width: 70%;
+    padding: 0 30px 0;
+    margin: 0 0 40px 0;
+  }
+  .contact__form {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    padding: 20px 20px 0;
+  }
+  .contact__nav__wrapper {
+    margin-bottom: 0;
+  }
+  .contact__adress {
+    width: 100%;
+    padding: 0 20px 0;
+  }
+  .contact__form {
+    width: 100%;
+  }
+  .contact__form h2 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 500;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

@@ -164,6 +164,7 @@ a {
 .header__number a {
   line-height: 19px;
   color: #B3B3BA;
+  font-weight: 700;
 }
 
 .ico-facebook {
@@ -401,7 +402,6 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 22px;
   border-top: 4px solid #E6E6F0;
   padding-top: 32px;
 }
@@ -663,6 +663,7 @@ a {
   }
   .about__list__box h2 {
     text-align: center;
+    margin-bottom: 40px;
   }
   .about__list {
     border-left: none;
@@ -734,7 +735,7 @@ a {
   }
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 767px) {
   .header__logo__wrapper p {
     font-size: 19px;
     line-height: 22px;

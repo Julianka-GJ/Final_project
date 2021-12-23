@@ -174,6 +174,8 @@ a {
 
 .section__map {
     background-color: $section__team-background;
+    width: 100%;
+    overflow: hidden;
 }
 
 @import "footer";
@@ -181,4 +183,209 @@ a {
 .footer__adress {
     border: none;
 }
+
+@media screen and (max-width: 1125px) {
+    .header__address {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        padding: 20px 30px 0;
+    }
+
+    .header {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    
+    .header__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        order: 1;
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 32px;
+        padding: 10px 7px;
+
+        &::after, &::before {
+            @include pseudo;
+            background-color: #323264;
+            width: 100%;
+            height: 2px;
+            left: 0;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        & span {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #323264;
+            top: 19px;
+            left: 0;
+        }
+    }
+
+    .header__contact__nav {
+        align-items: flex-start;
+    }
+
+    .contact__nav__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .header__contact {
+        width: 100%;
+        justify-content: space-between;
+
+        div {
+            padding-right: 0;
+        }
+
+        & div::after {
+            display: none;
+        }
+    }
+    
+    .header__languages__button {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .facebook {
+        display: none;
+    }
+    
+    .header__nav {
+        display: none;
+    }
+    
+    .footer__adress, .adress__box, .footer__contact {
+        flex-direction: column;
+    }
+
+    .footer__adress {
+        padding: 0 20px 118px;
+    }
+
+    .adress__box {
+        margin-bottom: 0;
+
+        p {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+
+        a {
+            margin-bottom: 20px;
+        }
+
+        & a::before {
+            display: none;
+        }
+    }
+    
+    .footer__contact {
+        a {
+            margin-bottom: 20px;
+        }
+    }
+    
+    .footer__number {
+        &::before {
+            display: none;
+        }
+    }
+    
+    .footer__mailto {
+        &::before {
+            display: none;
+        }
+    }
+
+    .footer__company {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        margin-bottom: 30px;
+    }
+
+    .symbol {
+        width: 21.16px;
+        height: 23.95px;
+    }
+
+    .slash {
+        width: 11px;
+        height: 24px;
+    }
+
+    .header__logo__wrapper {
+
+        p {
+            font-size: 19px;
+            line-height: 22px;
+        }
+    }
+
+    .section__contact__box {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+        
+    .contact__adress {
+        width: 70%;
+        padding: 0 30px 0;
+        margin: 0 0 40px 0;
+    }
+
+    .contact__form {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container {
+        padding: 20px 20px 0;
+    }
+
+    .contact__nav__wrapper {
+        margin-bottom: 0;
+    }
+
+    .contact__adress {
+        width: 100%;
+        padding: 0 20px 0;
+    }
+
+    .contact__form {
+        width: 100%;
+
+        h2 {
+            font-size: 22px;
+            line-height: 26px;
+            font-weight: 500;
+        }
+    }
+}
+
+    
 

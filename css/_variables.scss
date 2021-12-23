@@ -37,6 +37,7 @@ $linear-gradient-header: to right top, #323264, #323264 50%, #7A425E;
 $background-symbol-before: rgba(22, 22, 136, 0) 17%, #323264 90%;
 $section__services-background: to left bottom, #323264, #323264 60%, #643E72;
 $title-h2: to right, #F0145A, #EF8080;
+$title-h2-reverse: to right, #EF8080, #F0145A;
 $services__skill-h3: #24A3FF; // также меню nav header, ссылки, button
 $section__team-background: #F5F5FA;
 $text__grey: #B3B3BA; // мелкие серые заголовки, header, footer
@@ -62,7 +63,7 @@ $languages-button-active: #F0145A;
 
 @mixin active__tab {
     -webkit-background-clip: text;
-    background-image: linear-gradient(to right, #EF8080, #F0145A);
+    background-image: linear-gradient($title-h2-reverse);
     -webkit-text-fill-color: transparent; 
 }
 
