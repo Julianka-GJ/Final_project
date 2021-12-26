@@ -1,18 +1,4 @@
 @import "variables";
-
-.wrapper {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.container {
-    padding: 0 60px 0;
-}
-
-a {
-    text-decoration: none;
-}
-
 @import "header";
 
 // main 
@@ -210,30 +196,10 @@ a {
     .header__burger {
         display: block;
         position: relative;
-        width: 32px;
-        height: 32px;
-        padding: 10px 7px;
-
-        &::after, &::before {
-            @include pseudo;
-            background-color: #323264;
-            width: 100%;
-            height: 2px;
-            left: 0;
-        }
-
-        &::before {
-            top: 0;
-        }
-
-        & span {
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background-color: #323264;
-            top: 19px;
-            left: 0;
-        }
+    }
+    
+    .header__burger:hover .menu__burger__list {
+        display: block;
     }
 
     .header__contact__nav {

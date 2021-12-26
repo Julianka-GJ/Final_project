@@ -241,142 +241,69 @@ a {
   border-bottom: 2px solid #F0145A;
 }
 
-.publication__main {
-  background-color: #F5F5FA;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  padding: 40px 60px 60px;
+.main__title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
 }
 
-.main__tabs__box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 40px;
+.title__box {
+  max-width: 65.4%;
+}
+.title__box h2 {
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #F0145A, #EF8080);
+  -webkit-text-fill-color: transparent;
 }
 
-.tabs {
-  display: flex;
-  margin: 0 auto;
-  align-items: center;
-  list-style-type: none;
-  background-color: #E6E6F0;
-  padding: 2px;
+.team__spreadsheet {
+  display: grid;
+  grid-template-columns: repeat(3, 31.3%);
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.team__img {
+  margin-bottom: 20px;
+}
+.team__img img {
   border-radius: 12px;
+  max-width: 100%;
 }
-.tabs__item {
+
+.team__name {
+  position: relative;
+}
+.team__name a {
+  display: inline-block;
   font-size: 18px;
   line-height: 21px;
   font-weight: 500;
   color: #323264;
-  padding: 7px 31px;
-  border-radius: 10px;
-  width: 50%;
-  cursor: pointer;
-  transition-duration: 0.7s;
+  margin-bottom: 5px;
 }
-.tabs__item.active-tab {
-  background-color: #FFFFFF;
-}
-.tabs__item:hover {
-  background-color: #F5F5FA;
-}
-
-.publication__spreadsheet {
-  display: grid;
-  grid-template-columns: repeat(3, 31.3%);
-  grid-template-rows: auto;
-  align-items: start;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.publication__colum {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-}
-
-.publication__item {
-  background-color: #FFFFFF;
-  border-radius: 8px;
-}
-
-.publication__content {
-  padding: 20px;
-}
-
-.item__title {
-  padding-bottom: 20px;
-}
-.item__title a {
-  font-size: 18px;
-  color: #24A3FF;
-  line-height: 21px;
-  font-weight: 500;
-  transition-duration: 0.7s;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-.item__title a:hover {
-  color: #F0145A;
-}
-.item__title p {
-  font-size: 12px;
-  font-weight: 700px;
-  line-height: 14px;
-  letter-spacing: 1px;
-  color: #B3B3BA;
-  text-transform: uppercase;
-}
-
-.publication__text {
-  padding-top: 20px;
-  border-top: 4px solid #E6E6F0;
-}
-.publication__text p {
+.team__name p {
   font-size: 16px;
   line-height: 22px;
-  color: #000000;
-  letter-spacing: 1px;
-  padding-bottom: 5px;
+  color: #B3B3BA;
 }
 
-.picture img {
-  width: 100%;
-  margin-bottom: -4px;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-
-.button__box {
+.name__box {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-between;
 }
 
-.button {
-  border-style: none;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
-  color: #FFFFFF;
-  padding: 16px 0;
-  background-color: #24A3FF;
-  border-radius: 12px;
-  width: 100%;
-  box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
-  transition-duration: 1s;
-  max-width: 250px;
-  transition-duration: 1s;
-}
-.button:hover {
-  background-color: #0085FF;
-  box-shadow: 0 0 30px rgba(36, 163, 255, 0.5);
-}
-.button:active {
-  background-color: #006CCF;
-  box-shadow: none;
+.name__details {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: #F5F5FA;
+  background-image: url(../img/team-table.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .section__footer {
@@ -491,9 +418,22 @@ a {
   padding-left: 2px;
 }
 
-@media screen and (max-width: 1125px) {
+.footer__adress {
+  border-top: none;
+}
+
+.section__footer {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+@media screen and (max-width: 1200px) {
   .header__address {
     display: none;
+  }
+
+  .team__spreadsheet {
+    grid-template-columns: repeat(3, 30.9%);
   }
 }
 @media screen and (max-width: 991px) {
@@ -503,6 +443,7 @@ a {
 
   .header {
     flex-direction: column;
+    padding-top: 0px;
     margin-bottom: 30px;
   }
 
@@ -557,9 +498,8 @@ a {
     display: none;
   }
 
-  .publication__spreadsheet {
-    gap: 30px;
-    margin-bottom: 30px;
+  .team__spreadsheet {
+    grid-template-columns: repeat(3, 30.5%);
   }
 
   .footer__adress, .adress__box, .footer__contact {
@@ -567,7 +507,7 @@ a {
   }
 
   .footer__adress {
-    padding: 32px 20px 118px;
+    padding: 0 20px 80px;
   }
 
   .adress__box {
@@ -602,8 +542,21 @@ a {
   }
 }
 @media screen and (max-width: 767px) {
-  .header {
-    margin-bottom: 30px;
+  .main__title {
+    justify-content: left;
+    margin-bottom: 40px;
+  }
+
+  .title__box {
+    max-width: 100%;
+  }
+  .title__box h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .team__spreadsheet {
+    grid-template-columns: repeat(2, 47%);
   }
 
   .symbol {
@@ -620,57 +573,43 @@ a {
     font-size: 19px;
     line-height: 22px;
   }
-
-  .publication__spreadsheet {
-    grid-template-columns: repeat(2, 50%);
-    gap: 20px;
-  }
-
-  .inactive {
-    display: none;
-  }
 }
 @media screen and (max-width: 575px) {
   .container {
-    padding: 0 20px 0;
+    padding: 20px 20px 0;
   }
 
-  .header {
-    margin-bottom: 20px;
-    padding-top: 20px;
-  }
-
-  .publication__main {
-    padding-bottom: 40px;
-  }
-
-  .main__tabs__box {
+  .main__title {
     margin-bottom: 20px;
   }
 
-  .publication__spreadsheet {
+  .team__spreadsheet {
     grid-template-columns: 1fr;
     gap: 20px;
-    margin-bottom: 40px;
   }
 
-  .publication__colum {
-    gap: 20px;
+  .team__item {
+    display: flex;
+    align-items: flex-end;
   }
 
-  .item__title {
-    padding-bottom: 0;
+  .team__img {
+    margin: 0 20px 0 0;
+  }
+  .team__img img {
+    margin-bottom: -4px;
+    max-width: 158px;
   }
 
-  .publication__text {
-    display: none;
+  .name__box {
+    flex-direction: column;
   }
 
-  .inactive {
-    display: grid;
+  .team__name {
+    margin-bottom: 10px;
   }
 
-  .hidden {
-    display: none;
+  .footer__adress {
+    padding-bottom: 118px;
   }
 }

@@ -31,10 +31,23 @@
     padding: 0;
 }
 
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 0 60px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 
 // color 
 $linear-gradient-header: to right top, #323264, #323264 50%, #7A425E;
-$background-symbol-before: rgba(22, 22, 136, 0) 17%, #323264 90%;
+$background-symbol-before: rgba(22, 22, 136, 0) 11%, #323264 90%;
 $section__services-background: to left bottom, #323264, #323264 60%, #643E72;
 $title-h2: to right, #F0145A, #EF8080;
 $title-h2-reverse: to right, #EF8080, #F0145A;
@@ -95,8 +108,9 @@ $languages-button-active: #F0145A;
 
 @mixin publications-title {  //синие заголовоки h4 section__publications
     font-size: 18px;
-    color: #24A3FF;
+    color: $services__skill-h3;
     line-height: 21px;
+    font-weight: 500;
 }
 
 @mixin footer-contact {
