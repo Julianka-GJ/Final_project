@@ -109,10 +109,11 @@ a {
   display: none;
   width: 375px;
   position: absolute;
-  left: 0;
-  top: 0;
-  padding-top: 64px;
+  left: -325px;
+  top: 30px;
+  padding: 10px;
   border-radius: 12px;
+  background-color: #ffffff;
   z-index: 10;
 }
 .menu__burger__list a {
@@ -131,21 +132,7 @@ a {
 }
 .menu__burger__list a:hover {
   color: #F0145A;
-}
-
-.mask {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(50, 50, 100, 0.7);
-  z-index: 8;
-}
-
-.header__burger:hover .mask {
-  display: block;
+  background-color: #EDEDF7;
 }
 
 .header__contact__nav {
@@ -183,6 +170,7 @@ a {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 1px;
+  font-weight: 700;
   border-radius: 8px;
   padding: 5px;
   color: #B3B3BA;
@@ -227,7 +215,7 @@ a {
 }
 .header__nav a {
   margin-left: 15px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 21px;
   font-size: 18px;
   color: #24A3FF;
@@ -323,7 +311,7 @@ a {
 }
 .item__title p {
   font-size: 12px;
-  font-weight: 700px;
+  font-weight: 700;
   line-height: 14px;
   letter-spacing: 1px;
   color: #B3B3BA;
@@ -338,8 +326,7 @@ a {
   font-size: 16px;
   line-height: 22px;
   color: #000000;
-  letter-spacing: 1px;
-  padding-bottom: 5px;
+  letter-spacing: 0.5px;
 }
 
 .picture img {
